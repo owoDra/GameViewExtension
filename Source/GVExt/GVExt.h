@@ -1,15 +1,16 @@
-// Copyright Epic Games, Inc. All Rights Reserved.
+﻿// Copyright (C) 2023 owoDra
 
 #pragma once
 
-#include "CoreMinimal.h"
 #include "Modules/ModuleManager.h"
 
+/**
+ *  Modules for the main features of the Game View Extension plugin
+ */
 class FGVExtModule : public IModuleInterface
 {
 public:
-
-	/** IModuleInterface implementation */
 	virtual void StartupModule() override;
 	virtual void ShutdownModule() override;
+
 };
