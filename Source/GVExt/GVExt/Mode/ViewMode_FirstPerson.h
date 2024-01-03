@@ -2,7 +2,7 @@
 
 #pragma once
 
-#include "ViewMode.h"
+#include "Mode/ViewMode.h"
 
 #include "ViewMode_FirstPerson.generated.h"
 

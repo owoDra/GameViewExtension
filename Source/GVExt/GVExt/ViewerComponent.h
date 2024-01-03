@@ -18,7 +18,7 @@ class UViewMode;
 /**
  * Components that perform processing to enable the player to control the viewpoint
  */
-UCLASS()
+UCLASS(meta = (BlueprintSpawnableComponent))
 class GVEXT_API UViewerComponent 
 	: public UCameraComponent
 	, public IGameFrameworkInitStateInterface

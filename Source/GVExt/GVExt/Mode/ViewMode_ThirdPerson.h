@@ -16,7 +16,7 @@ struct FRuntimeFloatCurve;
  * ViewMode base class for TPP viewpoint
  */
 UCLASS(Abstract, Blueprintable)
-class UViewMode_ThirdPerson : public UViewMode
+class GVEXT_API UViewMode_ThirdPerson : public UViewMode
 {
 	GENERATED_BODY()
 public:

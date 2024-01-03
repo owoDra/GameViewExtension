@@ -20,14 +20,14 @@ UViewerComponent::UViewerComponent(const FObjectInitializer& ObjectInitializer)
 	: Super(ObjectInitializer)
 {
 	SetIsReplicatedByDefault(false);
-
-	CameraModeStack = ObjectInitializer.CreateDefaultSubobject<UViewModeStack>(this, TEXT("ViewModeStack"));
 }
 
 
 void UViewerComponent::OnRegister()
 {
 	Super::OnRegister();
+
+	CameraModeStack = NewObject<UViewModeStack>(this);
 
 	// This component can only be added to classes derived from APawn
 
