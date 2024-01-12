@@ -105,7 +105,7 @@ protected:
 
 public:
 	UFUNCTION(BlueprintCallable, BlueprintPure, Category = "Components")
-	static UViewerComponent* FindCameraComponent(const APawn* Pawn);
+	static UViewerComponent* FindViewerComponent(const APawn* Pawn);
 
 	/**
 	 * Returns the difference in ControlRotation from the previous cached frame

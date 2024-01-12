@@ -266,7 +266,7 @@ void UViewerComponent::ComputeCameraView(float DeltaTime, FMinimalViewInfo& Desi
 }
 
 
-UViewerComponent* UViewerComponent::FindCameraComponent(const APawn* Pawn)
+UViewerComponent* UViewerComponent::FindViewerComponent(const APawn* Pawn)
 {
 	return (Pawn ? Pawn->FindComponentByClass<UViewerComponent>() : nullptr);
 }
