@@ -242,12 +242,11 @@ void UViewerComponent::ComputeCameraView(float DeltaTime, FMinimalViewInfo& Desi
 	CameraModeStack->EvaluateStack(DeltaTime, CameraModeView);
 
 	ControlRotationDelta = (CameraModeView.ControlRotation - PreviousControlRotation);
+	PreviousControlRotation = CameraModeView.ControlRotation;
 	
 	SetWorldLocationAndRotation(CameraModeView.Location, CameraModeView.Rotation);
-	PreviousControlRotation = CameraModeView.ControlRotation;
-	PlayerController->SetControlRotation(CameraModeView.ControlRotation);
+	
 	FieldOfView = CameraModeView.FieldOfView;
-
 	DesiredView.Location = CameraModeView.Location;
 	DesiredView.Rotation = CameraModeView.Rotation;
 	DesiredView.FOV = CameraModeView.FieldOfView;
