@@ -2,7 +2,7 @@
 
 #include "ViewMode.h"
 
-#include "Mode/ViewModeAction.h"
+#include "Action/ViewModeAction.h"
 #include "ViewerComponent.h"
 
 #include "GameFramework/Character.h"
