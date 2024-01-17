@@ -106,9 +106,12 @@ bool UViewerComponent::CanChangeInitState(UGameFrameworkComponentManager* Manage
 	 */
 	else if (CurrentState == TAG_InitState_DataAvailable && DesiredState == TAG_InitState_DataInitialized)
 	{
-		if (!DefaultViewMode)
+		if (GetOwner()->GetNetMode() != ENetMode::NM_DedicatedServer)
 		{
-			return false;
+			if (!DefaultViewMode)
+			{
+				return false;
+			}
 		}
 
 		return CanChangeInitStateToDataInitialized(Manager);
